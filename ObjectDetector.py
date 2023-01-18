@@ -6,12 +6,12 @@ from email.message import EmailMessage
 def send_email():
     msg = EmailMessage()
     msg['Subject'] = "Motion Detected 👀"
-    msg['From'] = "Boba Watchdog"
-    msg['To'] = "chaseliu99@gmail.com"
-    msg.set_content("Motion has been detected in the basement. Please check the gate to see if Boba went through.")
+    msg['From'] = "Dog Watchdog"
+    msg['To'] = "email"
+    msg.set_content("Motion has been detected")
 
     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    server.login("bobawatchdog123@gmail.com", "xvlouurkkbmtpoib")
+    server.login("email", "password")
     server.send_message(msg)
     server.quit()
     print('Email has been sent')
